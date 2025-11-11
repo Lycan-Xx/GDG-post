@@ -1,0 +1,60 @@
+.skeleton {
+  background: linear-gradient(
+    90deg,
+    #F5F5F5 0%,
+    #E5E5E5 50%,
+    #F5F5F5 100%
+  );
+  background-size: 200% 100%;
+  animation: skeleton-loading 1.5s ease-in-out infinite;
+  border-radius: var(--radius-sm);
+}
+
+.skeleton--circular {
+  border-radius: 50%;
+}
+
+.skeleton--text {
+  border-radius: 4px;
+}
+
+@keyframes skeleton-loading {
+  0% {
+    background-position: 200% 0;
+  }
+  100% {
+    background-position: -200% 0;
+  }
+}
+
+.skeleton-post-card {
+  background-color: var(--color-background);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  padding: var(--spacing-md);
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-md);
+}
+
+.skeleton-post-header {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-sm);
+}
+
+.skeleton-post-header-text {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-xs);
+  flex: 1;
+}
+
+.skeleton-post-media {
+  margin: var(--spacing-sm) 0;
+}
+
+.skeleton-post-actions {
+  display: flex;
+  gap: var(--spacing-md);
+}
