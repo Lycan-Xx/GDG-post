@@ -1,0 +1,143 @@
+.timeline-page {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background-color: var(--color-background);
+}
+
+/* Header */
+.timeline-header {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: var(--spacing-md) var(--spacing-lg);
+  background-color: var(--color-background);
+  border-bottom: 1px solid var(--color-border);
+}
+
+.timeline-logo {
+  font-size: var(--font-size-heading);
+  font-weight: var(--font-weight-regular);
+  margin: 0;
+}
+
+.timeline-profile-button {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-sm);
+  padding: var(--spacing-xs) var(--spacing-md);
+  border: 2px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  background-color: var(--color-background);
+  cursor: pointer;
+  transition: background-color var(--transition-fast);
+  min-height: 44px;
+}
+
+.timeline-profile-button:hover {
+  background-color: var(--color-button-hover);
+}
+
+.timeline-profile-pic {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.timeline-profile-name {
+  font-size: var(--font-size-body);
+  font-weight: var(--font-weight-medium);
+}
+
+/* Refresh Indicator */
+.timeline-refresh-indicator {
+  padding: var(--spacing-sm);
+  text-align: center;
+  background-color: var(--color-button-hover);
+  font-size: var(--font-size-small);
+}
+
+/* Feed */
+.timeline-feed {
+  flex: 1;
+  max-width: 600px;
+  width: 100%;
+  margin: 0 auto;
+  padding: var(--spacing-lg);
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-lg);
+}
+
+.timeline-empty {
+  text-align: center;
+  padding: var(--spacing-2xl);
+  color: var(--color-text-secondary);
+}
+
+/* Upload Button */
+.timeline-upload-button {
+  position: fixed;
+  bottom: var(--spacing-lg);
+  right: var(--spacing-lg);
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-sm);
+  padding: var(--spacing-md) var(--spacing-lg);
+  border: 2px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  background-color: var(--color-background);
+  cursor: pointer;
+  transition: all var(--transition-fast);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  z-index: 50;
+  min-height: 56px;
+}
+
+.timeline-upload-button:hover {
+  background-color: var(--color-border);
+  color: var(--color-background);
+  transform: scale(1.05);
+}
+
+.upload-icon {
+  font-size: 24px;
+  font-weight: var(--font-weight-bold);
+  line-height: 1;
+}
+
+.upload-text {
+  font-size: var(--font-size-body);
+  font-weight: var(--font-weight-medium);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .timeline-logo {
+    font-size: 24px;
+  }
+
+  .timeline-profile-name {
+    display: none;
+  }
+
+  .timeline-feed {
+    padding: var(--spacing-md);
+  }
+
+  .upload-text {
+    display: none;
+  }
+
+  .timeline-upload-button {
+    padding: var(--spacing-md);
+    border-radius: 50%;
+    width: 56px;
+    height: 56px;
+    justify-content: center;
+  }
+}
