@@ -1,0 +1,16 @@
+.card {
+  background-color: var(--color-background);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  padding: var(--spacing-md);
+  box-shadow: var(--shadow-none);
+}
+
+.card[role="button"] {
+  cursor: pointer;
+  transition: background-color var(--transition-fast);
+}
+
+.card[role="button"]:hover {
+  background-color: var(--color-button-hover);
+}
